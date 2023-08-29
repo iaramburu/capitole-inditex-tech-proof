@@ -1,0 +1,1 @@
+# capitole-inditex-tech-proof
