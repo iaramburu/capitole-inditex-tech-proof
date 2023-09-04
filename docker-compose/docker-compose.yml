@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  capitoleconsulting-techproof-postgres:
+    image: postgres:15
+    hostname: capitoleconsulting-techproof-postgres
+    container_name: capitoleconsulting-techproof-postgres
+    restart: no
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - C:\tmp\capitoleconsulting\postgres:/data/db
+      - ./postgres/postgres-init.sql:/docker-entrypoint-initdb.d/create_tables.sql
