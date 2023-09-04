@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /capitoleconsulting-inditex
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: tech_proof
+    password: tech_proof2023!
+    url: jdbc:postgresql://localhost:5432/tech_proof?useSSL=false
+  flyway:
+    enabled: true
+    schemas:
+      - public
+      - tech_proof
+    table: flyway
+    baseline-on-migrate: true
+    out-of-order: true
+    locations:
+      - classpath:flyway/all

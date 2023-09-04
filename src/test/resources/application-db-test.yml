@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tech_proof_test?useSSL=false
+  flyway:
+    locations:
+      - classpath:flyway/all
+      - classpath:flyway/db-test
